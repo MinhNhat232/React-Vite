@@ -119,7 +119,7 @@
   background: white;
 }
 
-.todo-data > div::before {
+/* .todo-data > div::before {
   content: '✓';
   position: absolute;
   right: 20px;
@@ -129,7 +129,7 @@
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} */
 
 .todo-data > div:hover::before {
   opacity: 1;
@@ -204,6 +204,12 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.todo-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @keyframes logo-spin {
