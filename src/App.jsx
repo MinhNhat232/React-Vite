@@ -21,7 +21,10 @@ const App = () => {
     setTodoList([...todoList, newToDo]);
   }
 
-
+  const deleteTodo = (id) => {
+    setTodoList(todoList.filter(item => item.id !== id));
+    console.log("ID: ", id);
+  }
 
   return (
     <>
@@ -34,7 +37,8 @@ const App = () => {
 
         {todoList.length > 0 ?
           <TodoData
-            todoList={todoList} //props
+            todoList={todoList}
+            deleteTodo={deleteTodo} //props
           />
           :
 
